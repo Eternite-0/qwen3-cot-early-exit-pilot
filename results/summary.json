@@ -1,0 +1,14 @@
+{
+  "study": "Qwen3-1.7B CoT internalization and intermediate early-exit pilot",
+  "scope": "synthetic generator-transfer; one matched training seed; 500 holdout items; five timing repeats",
+  "conditions": {
+    "original_direct": {"accuracy": 0.5948, "accuracy_ci95": [0.5473, 0.6388], "p50_latency_ms": 103.66, "p95_latency_ms": 136.75, "mean_output_tokens": 3.2888, "schema_valid_rate": 1.0},
+    "answer_only_sft": {"accuracy": 0.6916, "accuracy_ci95": [0.6529, 0.7286], "p50_latency_ms": 203.40, "p95_latency_ms": 269.89, "mean_output_tokens": 3.3208, "schema_valid_rate": 0.9992},
+    "msd_style_alpha_1": {"accuracy": 0.7092, "accuracy_ci95": [0.6694, 0.7483], "p50_latency_ms": 204.05, "p95_latency_ms": 307.30, "mean_output_tokens": 3.3872, "schema_valid_rate": 1.0}
+  },
+  "msd_minus_answer_only": {"difference_pp": 1.76, "paired_ci95_pp": [-0.33, 3.89]},
+  "expansion_gate": {"passed": false, "required_difference_pp": 3.0, "required_paired_lower_bound_pp": 0.0},
+  "early_exit": {"dynamic_policy_selected": false, "best_descriptive_trained_head_depth": 24, "same_readout_p50_improvement_percent": 13.8},
+  "unmeasured": ["JevBench official score", "broad capability retention", "steering", "memory", "generation intervention", "multi-seed robustness", "real robot effectiveness"],
+  "method_label": "MSD-style on-policy full-vocabulary KL surrogate pilot; not a full-paper reproduction"
+}

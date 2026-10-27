@@ -1,0 +1,7 @@
+numpy>=1.26
+torch>=2.8
+transformers>=5.10
+peft>=0.19
+accelerate>=1.13
+matplotlib>=3.8
+pillow>=10

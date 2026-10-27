@@ -1,0 +1,7 @@
+# Supplementary measurement intervals
+
+Registered while the original frozen final evaluation is still running and before the agent has read any v6 quality outcomes. No inference, prompts, training, threshold, checkpoint, primary test, expansion gate, or original analysis source changes.
+
+From the completed saved requests, additionally report mean generated tokens, mean request latency, reciprocal-mean serial throughput, actual mean executed layers, and the project's candidate Brier/ECE with 95% intervals. Use 10,000 family-stratified exact-semantic-parameter cluster resamples, seed 20291106, retaining the five observations within each item. Calibration uses the first repeat to match the frozen aggregate. Record observed request variances for additive measures. These variances mix generation sampling and hardware variation and do not estimate pure hardware noise or cross-training-seed robustness.
+
+These are descriptive supplements. They do not replace the frozen p50/p95 comparisons or any success gate and introduce no new model selection. ECE is nonlinear and its bootstrap interval can be biased in small samples; it is a project calibration diagnostic, not JevBench official calibration. Run on all completed conditions, not a result-selected subset. Files are supplementary_measurement_uncertainty.json/.csv; the implementation and this protocol are separately hash-bound before reading outcomes.
